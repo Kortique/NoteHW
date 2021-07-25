@@ -14,12 +14,11 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.5" />
 
-    <EditText
+    <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/note_title_edit_text"
         style="@style/NoteTitleTextStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:autofillHints=""
         android:background="@android:color/transparent"
         android:enabled="false"
         android:hint="@string/note_title_hint"
@@ -30,7 +29,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/note_created_at_text_view"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -41,7 +40,7 @@
         app:layout_constraintTop_toBottomOf="@id/note_title_edit_text"
         tools:text="14.06.2021 16:26" />
 
-    <CheckBox
+    <androidx.appcompat.widget.AppCompatCheckBox
         android:id="@+id/note_priority_check_box"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -64,11 +63,10 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/note_priority_check_box" />
 
-    <EditText
+    <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/note_text_edit_text"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:autofillHints=""
         android:background="@android:color/transparent"
         android:enabled="false"
         android:gravity="start"
