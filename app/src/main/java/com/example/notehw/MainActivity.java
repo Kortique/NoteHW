@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         fragmentMap.put(FragmentEnum.LIST_OF_NOTES, ListOfNotesFragment.newInstance());
         fragmentMap.put(FragmentEnum.NOTE, NoteFragment.newInstance());
 
+
         fragmentTagMap = new HashMap<>();
         fragmentTagMap.put(FragmentEnum.LIST_OF_NOTES, ListOfNotesFragment.LIST_OF_NOTES_FRAGMENT_TAG);
         fragmentTagMap.put(FragmentEnum.NOTE, NoteFragment.NOTE_FRAGMENT_TAG);
