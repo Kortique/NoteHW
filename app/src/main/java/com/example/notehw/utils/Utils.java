@@ -1,4 +1,12 @@
-package com.example.notehw;
+package com.example.notehw.utils;
+
+import android.content.Context;
+import android.widget.Toast;
+
+import com.example.notehw.MainActivity;
+import com.example.notehw.R;
+import com.example.notehw.entities.Note;
+import com.example.notehw.entities.Priority;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -13,7 +21,7 @@ public class Utils {
                 new Note(
                         "Купить продукты для окрошки",
                         "Необходимо купить: огурцы, квас, хлеб и т.д.",
-                        new Date(1623312000000L),
+                        new Date(1626999400000L),
                         Priority.NORMAL
                 )
         );
@@ -22,7 +30,7 @@ public class Utils {
                 new Note(
                         "Изучить паттерны проектирования",
                         "Зайти на сайт https://refactoring.guru/ru",
-                        new Date(1623398400000L),
+                        new Date(1626398400000L),
                         Priority.NORMAL
                 )
         );
@@ -31,7 +39,7 @@ public class Utils {
                 new Note(
                         "Навести порядок в комнате",
                         "Расставить вещи в комнате по местам, провести уборку",
-                        new Date(1623486600000L),
+                        new Date(1626486600000L),
                         Priority.HIGH
                 )
         );
@@ -40,11 +48,19 @@ public class Utils {
                 new Note(
                         "Сходить в спортзал",
                         "Занятия во вторник, пятницу и воскресенье",
-                        new Date(1623761025000L),
+                        new Date(1626761025000L),
                         Priority.NORMAL
                 )
         );
 
         return notes;
+    }
+
+    public static void showToastShort(Context context, String message) {
+        showToast(context, message, Toast.LENGTH_SHORT);
+    }
+
+    public static void showToast(Context context, String message, int toastLength) {
+        Toast.makeText(context, message, toastLength).show();
     }
 }

@@ -1,4 +1,4 @@
-package com.example.notehw;
+package com.example.notehw.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,6 +11,12 @@ import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
+
+import com.example.notehw.entities.Note;
+import com.example.notehw.listeners.OnItemSelectedListener;
+import com.example.notehw.entities.Priority;
+import com.example.notehw.R;
+import com.example.notehw.utils.Utils;
 
 import java.util.List;
 
