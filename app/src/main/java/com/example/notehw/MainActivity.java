@@ -50,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
         fragmentTagMap.put(FragmentEnum.ABOUT, AboutFragment.ABOUT_FRAGMENT_TAG);
     }
 
-
     private FragmentEnum currentFragmentEntry = FragmentEnum.LIST_OF_NOTES;
 
     private Note selectedNote;
