@@ -1,4 +1,4 @@
-package com.example.notehw.fragments;
+package com.example.notehw.ui.fragments;
 
 public enum FragmentEnum {
     LIST_OF_NOTES,

@@ -1,6 +1,6 @@
-package com.example.notehw.listeners;
+package com.example.notehw.core.listeners;
 
-import com.example.notehw.entities.Note;
+import com.example.notehw.core.entities.Note;
 
 @FunctionalInterface
 public interface OnItemSelectedListener {
