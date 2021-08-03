@@ -1,4 +1,4 @@
-package com.example.notehw.core.entities;
+package com.example.notehw.common.entities;
 
 public enum Priority {
     NORMAL,

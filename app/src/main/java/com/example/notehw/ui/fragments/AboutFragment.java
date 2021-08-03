@@ -1,23 +1,18 @@
 package com.example.notehw.ui.fragments;
 
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
 import com.example.notehw.BuildConfig;
 import com.example.notehw.R;
 
-public class AboutFragment extends Fragment {
+public class AboutFragment extends BaseFragment {
     public static final String ABOUT_FRAGMENT_TAG = "ABOUT_FRAGMENT_TAG";
 
     public static AboutFragment newInstance() {
@@ -35,21 +30,8 @@ public class AboutFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
         String versionString = getString(R.string.version) + " " + BuildConfig.VERSION_NAME;
         TextView aboutVersion = view.findViewById(R.id.about_version);
         aboutVersion.setText(versionString);
-    }
-
-    @Override
-    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
-        MenuItem actionSort = menu.findItem(R.id.action_sort);
-        actionSort.setVisible(false);
-
-        MenuItem actionSearch = menu.findItem(R.id.action_search);
-        actionSearch.setVisible(false);
-
-        MenuItem actionAdd = menu.findItem(R.id.action_add);
-        actionAdd.setVisible(false);
     }
 }
