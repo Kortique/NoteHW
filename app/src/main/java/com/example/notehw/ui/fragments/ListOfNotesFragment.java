@@ -35,6 +35,7 @@ public class ListOfNotesFragment extends Fragment {
         this.onItemSelectedListener = onItemSelectedListener;
     }
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
