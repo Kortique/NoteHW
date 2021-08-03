@@ -1,4 +1,4 @@
-package com.example.notehw;
+package com.example.notehw.ui;
 
 import android.annotation.SuppressLint;
 import android.content.res.Configuration;
@@ -18,13 +18,14 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 import com.google.android.material.navigation.NavigationView;
-import com.example.notehw.entities.Note;
-import com.example.notehw.fragments.AboutFragment;
-import com.example.notehw.fragments.FragmentEnum;
-import com.example.notehw.fragments.ListOfNotesFragment;
-import com.example.notehw.fragments.NoteFragment;
-import com.example.notehw.utils.Publisher;
-import com.example.notehw.utils.Utils;
+import com.example.notehw.core.entities.Note;
+import com.example.notehw.ui.fragments.AboutFragment;
+import com.example.notehw.ui.fragments.FragmentEnum;
+import com.example.notehw.ui.fragments.ListOfNotesFragment;
+import com.example.notehw.ui.fragments.NoteFragment;
+import com.example.notehw.core.utils.Publisher;
+import com.example.notehw.core.utils.Utils;
+import com.example.notehw.R;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -49,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
         fragmentTagMap.put(FragmentEnum.NOTE, NoteFragment.NOTE_FRAGMENT_TAG);
         fragmentTagMap.put(FragmentEnum.ABOUT, AboutFragment.ABOUT_FRAGMENT_TAG);
     }
-
 
     private FragmentEnum currentFragmentEntry = FragmentEnum.LIST_OF_NOTES;
 

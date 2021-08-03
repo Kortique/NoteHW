@@ -1,4 +1,4 @@
-package com.example.notehw.utils;
+package com.example.notehw.core.utils;
 
 interface PublisherGetter {
     Publisher getPublisher();

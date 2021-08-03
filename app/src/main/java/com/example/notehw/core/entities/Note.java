@@ -1,4 +1,4 @@
-package com.example.notehw.entities;
+package com.example.notehw.core.entities;
 
 import android.os.Parcel;
 import android.os.Parcelable;

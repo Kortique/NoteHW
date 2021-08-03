@@ -1,12 +1,10 @@
-package com.example.notehw.utils;
+package com.example.notehw.core.utils;
 
 import android.content.Context;
 import android.widget.Toast;
 
-import com.example.notehw.MainActivity;
-import com.example.notehw.R;
-import com.example.notehw.entities.Note;
-import com.example.notehw.entities.Priority;
+import com.example.notehw.core.entities.Note;
+import com.example.notehw.core.entities.Priority;
 
 import java.util.ArrayList;
 import java.util.Date;

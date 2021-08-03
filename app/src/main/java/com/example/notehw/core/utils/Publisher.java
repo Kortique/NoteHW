@@ -1,6 +1,6 @@
-package com.example.notehw.utils;
+package com.example.notehw.core.utils;
 
-import com.example.notehw.entities.Note;
+import com.example.notehw.core.entities.Note;
 
 import java.util.HashSet;
 import java.util.Set;

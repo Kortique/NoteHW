@@ -1,4 +1,4 @@
-package com.example.notehw.fragments;
+package com.example.notehw.ui.fragments;
 
 import android.app.DatePickerDialog;
 import android.os.Bundle;
@@ -17,10 +17,10 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.notehw.R;
-import com.example.notehw.entities.Note;
-import com.example.notehw.entities.Priority;
-import com.example.notehw.utils.Observer;
-import com.example.notehw.utils.Utils;
+import com.example.notehw.core.entities.Note;
+import com.example.notehw.core.entities.Priority;
+import com.example.notehw.core.utils.Observer;
+import com.example.notehw.core.utils.Utils;
 
 import java.util.Calendar;
 import java.util.Date;

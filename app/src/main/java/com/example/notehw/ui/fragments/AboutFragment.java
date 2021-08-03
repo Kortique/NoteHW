@@ -1,4 +1,4 @@
-package com.example.notehw.fragments;
+package com.example.notehw.ui.fragments;
 
 import android.os.Bundle;
 
