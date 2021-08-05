@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         initView();
 
         CompositionRoot compositionRoot = ((CustomApplication) getApplication()).getCompositionRoot();
