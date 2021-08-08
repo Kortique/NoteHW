@@ -21,7 +21,7 @@ import com.example.notehw.common.datasources.NotesSource;
 import com.example.notehw.common.entities.Note;
 import com.example.notehw.common.entities.Priority;
 import com.example.notehw.ui.adapters.NotesAdapter;
-import com.example.notehw.navigator.ScreenNavigator;
+import com.example.notehw.ui.navigator.ScreenNavigator;
 
 import java.util.Date;
 import java.util.Objects;
@@ -62,6 +62,8 @@ public class ListOfNotesFragment extends BaseFragment {
         navigateToFragment();
 
         initRecyclerView(view);
+
+        dataSource.fetchData(notesSource -> notesAdapter.notifyDataSetChanged());
     }
 
     private void navigateToFragment() {
@@ -106,7 +108,9 @@ public class ListOfNotesFragment extends BaseFragment {
     }
 
     private void setAdapter() {
-        notesAdapter = new NotesAdapter(dataSource);
+        notesAdapter = new NotesAdapter();
+
+        notesAdapter.setDataSource(dataSource);
 
         notesAdapter.setOnItemClickListener((v, position) -> {
             screenNavigator.setSelectedPosition(position);

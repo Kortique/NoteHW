@@ -2,7 +2,9 @@ package com.example.notehw.common.di;
 
 import com.example.notehw.common.datasources.NotesSource;
 import com.example.notehw.common.datasources.NotesSourceImpl;
-import com.example.notehw.navigator.ScreenNavigator;
+import com.example.notehw.common.datasources.NotesFirebaseImpl;
+import com.example.notehw.ui.navigator.ScreenNavigator;
+
 
 public class CompositionRoot {
 
@@ -11,7 +13,7 @@ public class CompositionRoot {
 
     public NotesSource getDataSource() {
         if (dataSource == null) {
-            dataSource = new NotesSourceImpl();
+            dataSource = new NotesFirebaseImpl();
         }
 
         return dataSource;

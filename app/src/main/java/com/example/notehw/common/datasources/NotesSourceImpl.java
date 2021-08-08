@@ -2,14 +2,21 @@ package com.example.notehw.common.datasources;
 
 import com.example.notehw.common.entities.Note;
 import com.example.notehw.common.utils.Utils;
+import com.example.notehw.common.handlers.FetchDataCompletedHandler;
 
 import java.util.List;
 
 public class NotesSourceImpl implements NotesSource {
-    private final List<Note> notes;
+    private List<Note> notes;
 
     public NotesSourceImpl() {
         notes = Utils.getListOfNotes();
+    }
+
+    @Override
+    public void fetchData(FetchDataCompletedHandler fetchDataCompletedHandler) {
+        notes = Utils.getListOfNotes();
+        fetchDataCompletedHandler.fetchDataCompleted(this);
     }
 
     @Override

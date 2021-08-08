@@ -1,8 +1,10 @@
 package com.example.notehw.ui.adapters;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.ContextCompat;
@@ -15,34 +17,41 @@ import com.example.notehw.common.entities.Priority;
 import com.example.notehw.common.handlers.RegisterContextMenuHandler;
 
 public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NoteViewHolder> {
-    private final NotesSource dataSource;
+    private NotesSource dataSource;
 
     private OnItemClickListener itemClickListener;
     private RegisterContextMenuHandler registerContextMenuHandler;
 
     private int menuPosition;
 
-    public NotesAdapter(NotesSource dataSource) {
-        this.dataSource = dataSource;
-    }
     @NonNull
     @Override
     public NoteViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.list_of_notes_item, parent, false);
+
         return new NoteViewHolder(view);
     }
+
     @Override
     public void onBindViewHolder(@NonNull NoteViewHolder holder, int position) {
         holder.bind(dataSource.getNote(position));
     }
+
     @Override
     public int getItemCount() {
         return dataSource.getSize();
     }
+
     public void setOnItemClickListener(OnItemClickListener itemClickListener) {
         this.itemClickListener = itemClickListener;
     }
+
+    public void setDataSource(NotesSource dataSource) {
+        this.dataSource = dataSource;
+        notifyDataSetChanged();
+    }
+
     @FunctionalInterface
     public interface OnItemClickListener {
         void onItemClick(View view, int position);
@@ -60,13 +69,17 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NoteViewHold
         private final TextView titleTextView;
         private final View priorityView;
         private final TextView createdAtTextView;
+
         private final int priorityHighColor;
         private final int priorityNormalColor;
+
         public NoteViewHolder(@NonNull View itemView) {
             super(itemView);
+
             titleTextView = itemView.findViewById(R.id.title);
             priorityView = itemView.findViewById(R.id.priority);
             createdAtTextView = itemView.findViewById(R.id.created_at);
+
             priorityHighColor = ContextCompat.getColor(itemView.getContext(), R.color.red_500);
             priorityNormalColor = ContextCompat.getColor(itemView.getContext(), R.color.white);
 
@@ -92,6 +105,7 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NoteViewHold
             createdAtTextView.setText(note.getCreatedAtInFormat());
             setPriorityColor(note);
         }
+
         private void setPriorityColor(Note note) {
             if (note.getPriority() == Priority.HIGH) {
                 priorityView.setBackgroundColor(priorityHighColor);
