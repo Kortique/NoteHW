@@ -55,6 +55,7 @@ public class ListOfNotesFragment extends BaseFragment {
                              Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_list_of_notes, container, false);
     }
+
     @Override
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);

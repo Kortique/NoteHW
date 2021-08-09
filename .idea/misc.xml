@@ -4,8 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/StudyAndroid/NoteHW/app/src/main/res/layout-land/content_main.xml" value="0.12291666666666666" />
-        <entry key="..\:/StudyAndroid/NoteHW/app/src/main/res/layout/activity_authorization.xml" value="0.36666666666666664" />
+        <entry key="..\:/StudyAndroid/NoteHW/app/src/main/res/layout/activity_authorization.xml" value="0.20572916666666666" />
         <entry key="..\:/StudyAndroid/NoteHW/app/src/main/res/layout/content_main.xml" value="0.21851851851851853" />
+        <entry key="..\:/StudyAndroid/NoteHW/app/src/main/res/layout/fragment_about.xml" value="0.21851851851851853" />
         <entry key="..\:/StudyAndroid/NoteHW/app/src/main/res/layout/nav_header_main.xml" value="0.21851851851851853" />
         <entry key="..\:/StudyAndroid/NoteHW/app/src/main/res/menu/notes_list_context_menu.xml" value="0.36666666666666664" />
       </map>

@@ -24,6 +24,7 @@ import com.example.notehw.common.utils.Utils;
 import com.example.notehw.ui.CustomApplication;
 import com.example.notehw.ui.fragments.FragmentEnum;
 import com.example.notehw.ui.navigator.ScreenNavigator;
+import com.google.firebase.FirebaseApp;
 
 public class MainActivity extends AppCompatActivity {
     private static final String ACCOUNT_NAME = "ACCOUNT_NAME";
@@ -53,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        FirebaseApp.initializeApp(this);
         setContentView(R.layout.activity_main);
 
         Bundle extras = getIntent().getExtras();
