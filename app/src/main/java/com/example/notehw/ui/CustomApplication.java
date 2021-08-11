@@ -12,9 +12,9 @@ public class CustomApplication extends Application {
     private CompositionRoot compositionRoot;
 
     @Override
-    public void onCreate(){
+    public void onCreate() {
         super.onCreate();
-            FirebaseApp.initializeApp(this);
+//        FirebaseApp.initializeApp(this);
 
         compositionRoot = new CompositionRoot();
     }

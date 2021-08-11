@@ -1,2 +1,10 @@
-rootProject.name = "NoteHW"
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://maven.xyz.com" }
+    }
+}
+rootProject.name = "My Application"
 include ':app'

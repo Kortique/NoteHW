@@ -21,4 +21,5 @@
     <string name="continue_without_auth">Продолжить без авторизации</string>
     <string name="sign_out">Выйти из аккаунта</string>
     <string name="user_email">e-mail</string>
+    <string name="default_web_client_id">513419352402-qqnp7msogluq218g1qquik0v6b2ec4i6.apps.googleusercontent.com</string>
 </resources>
