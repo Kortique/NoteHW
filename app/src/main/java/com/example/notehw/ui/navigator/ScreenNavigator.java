@@ -1,4 +1,4 @@
-package com.example.notehw.navigator;
+package com.example.notehw.ui.navigator;
 
 import androidx.annotation.IdRes;
 import androidx.fragment.app.Fragment;

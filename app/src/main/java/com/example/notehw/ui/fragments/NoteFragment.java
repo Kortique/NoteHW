@@ -1,4 +1,5 @@
 package com.example.notehw.ui.fragments;
+
 import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -18,7 +19,7 @@ import com.example.notehw.R;
 import com.example.notehw.common.datasources.NotesSource;
 import com.example.notehw.common.entities.Note;
 import com.example.notehw.common.entities.Priority;
-import com.example.notehw.navigator.ScreenNavigator;
+import com.example.notehw.ui.navigator.ScreenNavigator;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -88,9 +89,11 @@ public class NoteFragment extends BaseFragment {
             updateNoteInfo();
         }
     }
+
     @Override
     public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
         inflater.inflate(R.menu.main_fragment, menu);
+
         MenuItem actionSort = menu.findItem(R.id.action_sort);
         actionSort.setVisible(false);
 
@@ -109,6 +112,7 @@ public class NoteFragment extends BaseFragment {
         priorityCheckBox = rootView.findViewById(R.id.note_priority_check_box);
         textEditText = rootView.findViewById(R.id.note_text_edit_text);
     }
+
     private void updateNoteInfo() {
         titleEditText.setText(currentNote.getTitle());
         textEditText.setText(currentNote.getText());
@@ -131,6 +135,7 @@ public class NoteFragment extends BaseFragment {
             };
 
             CALENDAR.setTime(currentNote.getCreatedAt());
+
             DatePickerDialog dialog = new DatePickerDialog(
                     requireContext(),
                     dateSetListener,
@@ -138,6 +143,7 @@ public class NoteFragment extends BaseFragment {
                     CALENDAR.get(Calendar.MONTH),
                     CALENDAR.get(Calendar.DAY_OF_MONTH)
             );
+
             dialog.show();
         });
     }
@@ -157,6 +163,7 @@ public class NoteFragment extends BaseFragment {
         Priority priority = priorityCheckBox.isChecked() ? Priority.HIGH : Priority.NORMAL;
 
         Note updatedNote = new Note(title, text, datePickerDate, priority);
+        updatedNote.setId(currentNote.getId());
 
         dataSource.updateNote(currentPosition, updatedNote);
     }

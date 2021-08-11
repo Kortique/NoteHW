@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "513419352402",
+    "project_id": "notehw-e5093",
+    "storage_bucket": "notehw-e5093.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:513419352402:android:fcf70b23f32203f7ef028b",
+        "android_client_info": {
+          "package_name": "com.example.notehw"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "513419352402-03sfnvid2l0sqeal0bkfdh12vkujeid8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCl84XHQkKGj5gD5DdF3rwIN0w-421GwEQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "513419352402-03sfnvid2l0sqeal0bkfdh12vkujeid8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
