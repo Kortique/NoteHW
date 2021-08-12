@@ -9,6 +9,7 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.example.notehw.common.entities.Note;
 import com.example.notehw.common.handlers.FetchDataCompletedHandler;
 import com.example.notehw.common.mapping.NoteMapping;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,7 +35,12 @@ public class NotesFirebaseImpl implements NotesSource {
                     if (task.isSuccessful()) {
                         notes = new ArrayList<>();
 
-                        Objects.requireNonNull(task.getResult());
+                        QuerySnapshot result = task.getResult();
+                        if( result == null ) {
+                            return;
+                        } else {
+                            Objects.requireNonNull(result);
+                        }
 
                         for (QueryDocumentSnapshot snapshot : task.getResult()) {
                             Map<String, Object> document = snapshot.getData();

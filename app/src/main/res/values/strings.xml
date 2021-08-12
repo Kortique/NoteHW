@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Заметки</string>
+    <string name="app_name">Notes</string>
     <string name="note_title_hint">Заголовок заметки</string>
     <string name="high_priority">Высший приоритет</string>
     <string name="note_description">Описание заметки</string>
@@ -21,5 +21,10 @@
     <string name="continue_without_auth">Продолжить без авторизации</string>
     <string name="sign_out">Выйти из аккаунта</string>
     <string name="user_email">e-mail</string>
-    <string name="default_web_client_id">513419352402-qqnp7msogluq218g1qquik0v6b2ec4i6.apps.googleusercontent.com</string>
+    <string name="positive_button_caption">ДА</string>
+    <string name="negative_button_caption">НЕТ</string>
+    <string name="delete_note_title">Удаление заметки</string>
+    <string name="delete_note_message">Вы действительно хотите удалить заметку?</string>
+    <string name="note">Заметка</string>
+    <string name="save_button_caption">СОХРАНИТЬ</string>
 </resources>
