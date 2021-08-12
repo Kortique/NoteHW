@@ -14,6 +14,7 @@ import androidx.annotation.Nullable;
 
 import com.example.notehw.BuildConfig;
 import com.example.notehw.R;
+import com.example.notehw.ui.controllers.BaseFragment;
 
 public class AboutFragment extends BaseFragment {
     public static final String ABOUT_FRAGMENT_TAG = "ABOUT_FRAGMENT_TAG";

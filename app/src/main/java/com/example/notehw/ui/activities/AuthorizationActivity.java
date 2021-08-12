@@ -18,6 +18,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.button.MaterialButton;
 import com.example.notehw.R;
 import com.example.notehw.common.utils.Utils;
+import com.google.firebase.FirebaseApp;
 
 import java.text.MessageFormat;
 
@@ -40,7 +41,7 @@ public class AuthorizationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_authorization);
-
+        FirebaseApp.initializeApp(this);
         initViews();
     }
 
@@ -63,7 +64,9 @@ public class AuthorizationActivity extends AppCompatActivity {
 
         // Конфигурация запроса на регистрацию пользователя, чтобы получить
         // идентификатор пользователя, его почту и основной профайл (регулируется параметром)
-        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+        GoogleSignInOptions gso = new GoogleSignInOptions
+                .Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+//                .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
                 .build();
 
